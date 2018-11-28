@@ -1,15 +1,15 @@
 {
   "name": "timeline-monad",
   "version": "0.0.1",
-  "description": "Monadic FRP minimal implementation",
+  "description": "Micro Functional Reactive Programming (FRP) Framework with Monad structure",
   "main": "index.js",
   "module": "./build/modules/timeline-monad.js",
   "types": "./build/modules/timeline-monad.d.ts",
   "scripts": {
     "test": "jest --verbose=true"
   },
-  "repository": "https://github.com/kenokabe/timeline-monad",
-  "author": "kenokabe <kenokabe@gmail.com>",
+  "repository": "https://github.com/stken2050/timeline-monad",
+  "author": "Ken Okabe <stken2050@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "esm": "^3.0.84"
