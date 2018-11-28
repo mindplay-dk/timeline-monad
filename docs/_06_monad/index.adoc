@@ -1,0 +1,39 @@
+= Monad for Function Composition
+ifndef::source-highlighter[:source-highlighter: highlightjs]
+ifndef::highlightjs-theme[:highlightjs-theme: monokai]
+ifndef::imagesdir[:imagesdir: ../img/]
+ifndef::stem[:stem: latexmath]
+
+== Laws
+
+this isdd
+ stem:[\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.] interesting. 
+
+[stem]
+++++
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+++++
+
+
+力=質量stem:[\times]加速度
+
+[source, javascript]
+----
+const {camelCase} = require('lodash');
+
+console.log(camelCase('get content'));  // <1>
+----
+<1> Now you can see the output of this line in the browser.
+
+jkhkghjghjgdfdjghjtggsdssddfdfdfd
+
+dsfdfdsfdfssdsjhjhjhjhhjhjhj
+kjkjj
+
+kjkjkjkjkkkjkjk
+
+hjhjhjhhjhhj
+
+jkkkjkkjkjjkk
+
+jkkjjjjjk

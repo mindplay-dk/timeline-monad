@@ -1,0 +1,118 @@
+= Why FRP? Why not Promise? Why use timeline-monad?
+
+This chapter covers the following topics:
+
+- Importance of abstraction of time in Functional Programming
+
+- Promise/Future async await
+
+== ES6+ Promise
+
+
+
+ES7 Async await is a syntax sugar of Promise
+
+== What is FRP?
+
+== Promise is FRP, just limited once
+
+== Pro and Cons
+
+- lot of pre assumptions
+
+ffgfhgfhgfgfgfgfggffggf
+
+
+why not promise/future
+why not 
+
+why frp?
+
+complicated 
+lot of pre assumptions
+limited powerfdd
+
+
+unlimited power
+simple
+bareborn
+bo pre assumption
+flexible
+
+cando annything
+
+promise  1 time frp
+non repeaatble 
+
+state iodfdfdfd
+
+Before going into details, I would like to introduce a significant programming paradigm; __Functional Reactive Programming(FPP)__ because FRP is the fundamental concept of **timeline-monad**, and only reason this module exists.
+
+Understanding what FRP is makes so much easier to understand what this module is.
+
+== Mutable or Immutable, that is the question
+
+== Functional Programming is Immutable
+
+== Real world is mutable oh really?
+
+soboku jituzairon
+
+Real world is immutable block-universe
+
+ 
+ 
+
+[[block-universe]]
+
+
+
+Physics equation
+
+Gravity equation
+
+
+Of course
+
+1. IO  input output id not determined data is not provided in advance Look at the game!!
+
+2. complicated, it's impossible to write equations
+
+
+For 1. remember the blocke-universe. everything is determiend in advnce, including the behavior of your judement or hand move.
+
+For 2. Surely it's complicated, and that is the functional programming plays.
+
+Compose the simple functions
+
+How?  Complication comes from relations. so design the relation of every conppont.
+
+To be exact, they depends each other. That is the relation. Construct dependency graph composing functions. 
+
+that is the frp FRP is a progrrraming manner to recognize the real world is in fact not mutable but immutable.
+
+if you are familiar with conepts such as obserbable, data-binding, those are kinds of FRP.
+
+event-driven and even lazy-evaluation(call by need) is strongly related to FRP.
+
+the key concpet is declaration.
+
+Declare the relation. dependency graph.
+This is pretty much same thing to declare the equation of physics in mathematic language.
+
+Immutable world.
+
+Or if you are familiar Microsoft Excel. each cell depends other cell
+
+and changing the cell by user(IO), the other cell are automatically changed according to the dependency they are synchlonized. It is like as if some cause trigger and propagate the change in the real world.
+
+So no more mutability problem, no more immutable and mutable gap in functional programming. Seeing the world as immutable is FRP
+
+IO state integrates into FRP.
+
+== Based on Value
+
+Bug: IDE tab, is deleted
+
+file is deleted the tab is no use
+so tab also deletedfggh

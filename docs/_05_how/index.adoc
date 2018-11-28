@@ -1,0 +1,267 @@
+= How to use
+ifndef::stem[:stem: latexmath]
+ifndef::imagesdir[:imagesdir: ../img/]
+
+[source, JavaScript]
+----
+const {camelCase} = require('lodash');
+
+console.log(camelCase('get content'));  // <1>
+----
+
+[source, js]
+----
+include::../../test-esm/hello-world.js[lines=5..]
+----
+
+[source%interactive, JavaScript]
+----
+const {camelCase} = require('lodash');
+
+console.log(camelCase('get content'));  // <1>
+----
+<1> Now you can see the output of this line in the browser.
+
+[[hello-world11]]
+== Hello world
+
+[source, Shell]
+.hello-world.js
+----
+include::../../test-esm/hello-world.js[lines=5..]
+----
+
+easy to trace to TL value
+console TL somewhere below doc
+
+[source,console]
+.console
+----
+$ node -r esm ./test-esm/hello-world.js 
+----
+
+[source,console]
+----
+Hello world
+----
+
+== Hello world timeline.sync()
+[source,js]
+.hello-world-timeline.js
+----
+include::../../test-esm/hello-world-timeline.js[lines=5..18]
+----
+
+[source,console]
+.console
+----
+$ node -r esm ./test-esm/hello-world-timeline.js 
+----
+
+[source,console]
+----
+Hello
+world
+----
+
+`timelineA` value is defined as `1` at first, then later changed to `5`.
+
+*`timelineB` is declared to be _always_ synchronized with `timelineA`, and an equation below is guaranteed to be satisfied.* 
+
+image::./_05_how/math/equation.svg[]
+
+[stem]
+++++
+timelineB = timelineA \times 2
+++++
+
+`timelineB` depends (relies) on `timelineA`, and after the declaration, you don't need to, or should not touch the value of `timelineB`. Of course, you can add relation and connection to other Timelines.
+
+[source,js]
+----
+include::../../test-esm/value-change01.js[lines=13]
+----
+
+Here,
+
+[[value-change.1]]
+[source,js]
+.value-change.1
+----
+include::../../test-esm/value-change01.js[lines=4..22]
+----
+
+[source,console]
+.console
+
+$ node -r esm ./test-esm/value-change01.js
+
+----
+1
+2 
+5  <1>
+10 <1>
+----
+<1> One second later
+
+== Step by step
+
+Prepare a log function.
+
+[source,js]
+----
+include::../../test-esm/value-change01.js[lines=4..7]
+----
+
+An empty `timeline` is created.
+The behavior of this timeline is defined by the rest of the code.
+
+[source,js]
+----
+include::../../test-esm/value-change01.js[lines=9]
+----
+ 
+In this code block, the `timeline` value is defined as `1`.
+
+[source,js]
+----
+include::../../test-esm/value-change01.js[lines=10]
+----
+
+It’s easy and straightforward to read the current value.
+
+[source,js]
+----
+include::../../test-esm/value-change01.js[lines=11]
+----
+
+The timeline method `sync` _observes_ and _maps_ the value of `timeline` to the value of `timeline1`.
+
+[source,js]
+----
+include::../../test-esm/value-change01.js[lines=13]
+----
+
+1 second later, `timeline` value is changed to `5`.
+
+[source,js]
+----
+include::../../test-esm/value-change01.js[lines=17..22]
+----
+
+[source,console]
+.console
+
+$ node -r esm ./test-esm/value-change01.js
+
+----
+1
+2 
+5  <1>
+10 <1>
+----
+<1> One second later
+
+=== Make every time-function to a timeline
+
+*timeline-monad* is designed to integrate any _mutable_ parts into timelines in functional programming scheme.
+ 
+In <<value-change.1>>, two mutable parts remains:
+
+- `setTimeout`
+- `console`  
+
+Both are objects that behave along _the time axis_ or we can say they are connected to _the real-world_.
+
+The time and real-world looks like _mutable_ from the point of view of functional programming, generally speaking, they say so.
+
+However, from the point of view of <<block-universe>> (discuss the details later), mutable objects are in fact, immutable objects that can be described by time-functions.
+
+- `setTimeout`
+
+So, let’s transform the both mutable objects to self-contained immutable timelines. 
+
+`setTimeout` function in  <<value-change.1>> can be integrated into a self-contained timeline: `delayTL` by simply wrapped by `T()`. See <<Syntax>>.
+
+ 
+[source,js]
+.from naked time function
+----
+include::../../test-esm/value-change01.js[lines=22]
+----
+
+[source,js]
+.to self-contained timeline
+----
+include::../../test-esm/value-change02.js[lines=18..26]
+----
+
+- `console` 
+
+What is `console`? 
+
+`console` object in JavaScript is a virtualization of the __physical console device__, and it's often mentioned as https://en.wikipedia.org/wiki/Input/output[I/O (Input/Output)].
+
+**A physical device in the  real-world can be abstracted as a time-function in functional programming**.
+
+`console` transforms to a timeline: `consoleTL`.
+
+[source,js]
+.from naked console function
+----
+include::../../test-esm/value-change01.js[lines=3..7]
+----
+
+[source,js]
+.console timeline
+----
+include::../../test-esm/value-change02.js[lines=5..10]
+----
+
+In this manner, console timeline wraps 
+
+
+
+=== Bunch of timelines
+
+[source,js]
+.example.2
+----
+include::../../test-esm/value-change02.js[lines=3..31]
+----
+
+[source,console]
+.console
+
+$ node -r esm ./test-esm/value-change02.js
+
+----
+2 
+10 <1>
+----
+<1> 1 second later
+
+
+hhgjghjghghjghghhhg
+
+     const texToHtml = (tex: string) =>
+          (stemCash[tex] !== undefined)
+            ? consoleTL[now] = "stem cashed!" &&
+            stemCash[tex]
+            : consoleTL[now] =
+            stemCash[tex] = katex
+              .renderToString(tex, {
+                displayMode: false,
+                throwOnError: false
+              });
+
+
+
+              1liner 
+              console[now[declare log
+
+
+
+       undefined no trigger
+conditional picky
+       mask  filter TL       

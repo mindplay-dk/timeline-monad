@@ -1,0 +1,50 @@
+= timeline-monad is Timeline Monad
+Ken Okabe <kenokabe@gmail.com>
+:keywords:    JavaScript, ECMAScript, Promise, FRP, timeline, monad
+:description: timeline FRP Monad
+:homepage:    https://kenokabe.github.io/timeline-monad/
+:source:      https://github.com/kenokabe/timeline-monad
+:toc: left
+:sectnums:
+:toclevels: 1
+:source-highlighter: highlightjs
+:highlightjs-theme: solarized-dark
+:imagesdir: ./img/ 
+:stem: latexmath
+ 
+---
+ddfddf
+dfddf
+- GitHub Repository
+
+https://github.com/kenokabe/timeline-monad
+
+- npm
+
+https://www.npmjs.com/package/timeline-monad
+
+- Quick Fiddle test
+
+https://jsfiddle.net/kenokabe/d3ocyhqr/
+
+ 
+:leveloffset: 1
+
+include::./_01_what/index.adoc[]
+
+include::./_02_why/index.adoc[]
+
+include::./_03_where/index.adoc[]
+
+include::./_04_api/index.adoc[]
+
+include::./_05_how/index.adoc[]
+
+include::./_06_monad/index.adoc[]
+
+include::./_07_install/index.adoc[]
+
+include::./_08_license/index.adoc[]
+
+
+ghhgggggghghghgfgh

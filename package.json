@@ -1,0 +1,22 @@
+{
+  "name": "timeline-monad",
+  "version": "0.0.1",
+  "description": "Monadic FRP minimal implementation",
+  "main": "index.js",
+  "module": "./build/modules/timeline-monad.js",
+  "types": "./build/modules/timeline-monad.d.ts",
+  "scripts": {
+    "test": "jest --verbose=true"
+  },
+  "repository": "https://github.com/kenokabe/timeline-monad",
+  "author": "kenokabe <kenokabe@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "esm": "^3.0.84"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "jest": "^23.6.0",
+    "typescript": "^3.1.6"
+  }
+}

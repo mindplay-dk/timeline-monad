@@ -1,0 +1,70 @@
+= API
+
+== TypeScript type definition
+
+[source,TypeScript]
+./dist/build/modules/timeline-monad.d.ts
+----
+include::../..//dist/build/modules/timeline-monad.d.ts[]
+----
+
+
+[[Syntax]]
+== Syntax
+
+[source,js]
+----
+const timeFunction = (self) ⇒ { /*…​*/ self[now] = value;};
+
+const timeline = T( timeFunction );
+
+const timeline1 = timeline
+                         .sync( someFunction );
+----
+
+=== T( timeFunction )
+
+[source,js]
+----
+const T: (timeFunction?: Function) => timeline
+----
+
+`T` is a function to return `timeline` object.
+
+`timeFunction` is a function to define the `timeline` behavior with the argument `self` (`timeline` itself).
+
+=== now
+
+[source,js]
+----
+const timeFunction = (self) ⇒ { /*…​*/ self[now] = value;};
+----
+
+=== .sync( someFunction )
+
+[source,js]
+----
+const timeline1 = timeline
+                         .sync( someFunction );
+----
+
+`timeFunction` is executed immediately by the `T` implementation, and when `self[now] = value` is defined, the `sync` method returns a value that `someFunction` is applied to. 
+
+[TIP]
+.**timeline-monad** is extremely simple and easy to learn.
+====
+`T`, `now` and `sync` are all of the reserved words and units provided by the module. Once some `timeline` is created, `sync` is the only method a programmer cares.
+====
+
+
+1
+sync  trigger
+
+
+sync  trigger
+1
+
+does not matter
+
+
+undefined never triggers

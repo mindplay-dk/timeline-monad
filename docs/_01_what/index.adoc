@@ -1,0 +1,10 @@
+= What is timeline-monad?
+
+1. *timeline-monad* is a JavaScript(ES6+) module of a minimal (super simple) implementation for __Functional Reactive Programming(FPP)__. The module provides *first class reactive values _'over time'_* .
+
+2. *timeline-monad* is robust for _function composition_
+because it has a https://ncatlab.org/nlab/show/monad[_monad_] structure.
+
+The details will be available later ...
+
+
