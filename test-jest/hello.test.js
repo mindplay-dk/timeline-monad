@@ -24,21 +24,17 @@ test("timeline.now === 1", () => {
 test("timeline.sync();", (done) => {
     //--------------------------
     const timeline = T();
-    timeline.sync((a) => expect.anything());
-    //--------------------------
-    //async test helper
-    timeline.sync(True(done));
+    timeline.sync((a) => done.fail());
+    //-------------------------- 
     // when timeline.now is undefined, never triggered
     setTimeout(done, 100);
 });
 test("timeline.sync(); timeline.now = undefined;", (done) => {
     //--------------------------
     const timeline = T();
-    timeline.sync((a) => expect.anything());
+    timeline.sync((a) => done.fail());
     timeline.now = undefined;
-    //--------------------------
-    //async test helper
-    timeline.sync(True(done));
+    //-------------------------- 
     // when timeline.now is undefined, never triggered
     setTimeout(done, 100);
 });
