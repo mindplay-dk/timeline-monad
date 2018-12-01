@@ -6,7 +6,7 @@ const Events = () => ((observers) => ({
     register: (f) => (observers[observers.length] = f),
     trigger: (val) => right(observers.map((f) => f(val)))(val)
 }))([]);
-const T = ((Event) => (timeFunction = () => { }) => {
+const T = ((Events) => (timeFunction = () => { }) => {
     //immutable in the frozen universe
     let currentVal = undefined;
     const timeline = ((ev) => ({

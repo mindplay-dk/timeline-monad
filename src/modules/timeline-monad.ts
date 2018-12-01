@@ -17,7 +17,7 @@ const Events = () => ((observers: Function[]) => ({
     (val)
 }))([]);
 
-const T = ((Event) =>
+const T = ((Events) =>
   (timeFunction: Function = () => { }): timeline => {
     //immutable in the frozen universe
     let currentVal: any = undefined;
