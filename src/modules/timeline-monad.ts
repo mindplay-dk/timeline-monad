@@ -32,15 +32,13 @@ const T = (timeFunction: Function = () => { }): timeline =>
           const nouse = observe((a: undefined) => {
             const newVal: undefined | timeline = f(a);
             // RightIdentity: join = TTX => TX  
-            const nouse =
-              (newVal !== undefined) &&
-                (newVal.type === timeline.type)
-                ? newVal.sync((a: undefined) => syncTL.now = a)
-                : syncTL.now = newVal
-            return true;
+            return (newVal !== undefined) &&
+              (newVal.type === timeline.type)
+              ? newVal.sync((a: undefined) =>
+                syncTL.now = a)
+              : syncTL.now = newVal
           });
           timeline.now = timeline.now;
-
           return syncTL;
         })(observers),
       };

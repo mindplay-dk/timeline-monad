@@ -25,11 +25,10 @@ const T = (timeFunction = () => { }) => ((observers) => {
                 const nouse = observe((a) => {
                     const newVal = f(a);
                     // RightIdentity: join = TTX => TX  
-                    const nouse = (newVal !== undefined) &&
+                    return (newVal !== undefined) &&
                         (newVal.type === timeline.type)
                         ? newVal.sync((a) => syncTL.now = a)
                         : syncTL.now = newVal;
-                    return true;
                 });
                 timeline.now = timeline.now;
                 return syncTL;
