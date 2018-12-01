@@ -22,12 +22,12 @@ const T = ((Events) => (timeFunction = () => { }) => {
         },
         sync: ((ev) => (f) => {
             const syncTL = T();
-            const todo = (a) => {
-                const newVal = f(a);
+            const todo = (val) => {
+                const newVal = f(val);
                 // RightIdentity: join = TTX => TX  
                 return (newVal !== undefined) &&
                     (newVal.type === timeline.type)
-                    ? newVal.sync((a) => syncTL.now = a)
+                    ? newVal.sync((val) => syncTL.now = val)
                     : syncTL.now = newVal;
             };
             ev.register(todo);
