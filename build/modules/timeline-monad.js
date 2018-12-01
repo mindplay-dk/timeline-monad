@@ -31,11 +31,7 @@ const T = (timeFunction = () => { }) => ((observers) => {
                         : syncTL.now = newVal;
                     return true;
                 });
-                // trigger if the timeline.now
-                // is already filled 
-                const nouse1 = (timeline.now === undefined)
-                    ? undefined //if undefined, do nothing
-                    : timeline.now = timeline.now;
+                timeline.now = timeline.now;
                 return syncTL;
             })(observers),
         };
