@@ -34,12 +34,12 @@ const T = ((Events) =>
       },
       sync: ((ev) => (f: Function) => {
         const syncTL: timeline = T();
-        const todo = (val: undefined) => {
+        const todo = (val: unknown) => {
           const newVal: undefined | timeline = f(val);
           // RightIdentity: join = TTX => TX  
           return (newVal !== undefined) &&
             (newVal.type === timeline.type)
-            ? newVal.sync((val: undefined) =>
+            ? newVal.sync((val: unknown) =>
               syncTL.now = val)
             : syncTL.now = newVal
         };
