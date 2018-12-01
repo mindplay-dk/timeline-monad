@@ -2,11 +2,11 @@
 //time-index of the current time
 // on the timeline from now until the future / next - now
 const right = (a) => (b) => b;
-const EV = () => ((observers) => ({
+const Events = () => ((observers) => ({
     register: (f) => (observers[observers.length] = f),
     trigger: (val) => right(observers.map((f) => f(val)))(val)
 }))([]);
-const T = ((EV) => (timeFunction = () => { }) => {
+const T = ((Event) => (timeFunction = () => { }) => {
     //immutable in the frozen universe
     let currentVal = undefined;
     const timeline = ((ev) => ({
@@ -34,8 +34,8 @@ const T = ((EV) => (timeFunction = () => { }) => {
             timeline.now = timeline.now;
             return syncTL;
         })(ev)
-    }))(EV());
+    }))(Events());
     timeFunction(timeline);
     return timeline;
-})(EV);
+})(Events);
 export { T };

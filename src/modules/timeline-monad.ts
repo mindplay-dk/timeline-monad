@@ -9,7 +9,7 @@ interface timeline {
 
 const right = (a: any) => (b: any) => b;
 
-const EV = () => ((observers: Function[]) => ({
+const Events = () => ((observers: Function[]) => ({
   register: (f: Function) =>
     (observers[observers.length] = f),
   trigger: (val: any) => right
@@ -17,7 +17,7 @@ const EV = () => ((observers: Function[]) => ({
     (val)
 }))([]);
 
-const T = ((EV) =>
+const T = ((Event) =>
   (timeFunction: Function = () => { }): timeline => {
     //immutable in the frozen universe
     let currentVal: any = undefined;
@@ -47,9 +47,9 @@ const T = ((EV) =>
         timeline.now = timeline.now;
         return syncTL;
       })(ev)
-    }))(EV());
+    }))(Events());
     timeFunction(timeline);
     return timeline;
-  })(EV);
+  })(Events);
 
 export { T };
