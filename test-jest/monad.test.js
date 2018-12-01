@@ -1,24 +1,7 @@
 
 const requireEsm = require('esm')(module);
 
-const right = (a) => (b) => b;
-
 const { T } = requireEsm("../build/modules/timeline-monad.js");
-const consoleTL =
-  ((console) =>
-    T(
-      (self) => self
-        .sync((a) => right
-          (console.log(a))(a)
-        )
-    ))(console);
-const log = (a) =>
-  (consoleTL[now] = a);
-
-const True = (done) => () => {
-  done();
-  return true;
-};
 
 //instant fill
 const timelineOf = (a) =>
@@ -128,5 +111,4 @@ const g = (a) => (a + 1);
     (timelineOf);
 
   monadTest(a)(fTL)(gTL);
-
 }
