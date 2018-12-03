@@ -41,7 +41,7 @@ const T = ((Events) =>
             (newVal.type === timeline.type)
             ? newVal.sync((val: unknown) =>
               syncTL.now = val)
-            : syncTL.now = newVal
+            : syncTL.now = newVal;
         };
         ev.register(todo);
         timeline.now = timeline.now;
