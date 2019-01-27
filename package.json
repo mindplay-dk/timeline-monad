@@ -2,12 +2,17 @@
   "name": "timeline-monad",
   "version": "0.0.1",
   "description": "Micro Functional Reactive Programming (FRP) Framework with Monad structure",
-  "main": "index.js",
-  "module": "./build/modules/timeline-monad.js",
-  "types": "./build/modules/timeline-monad.d.ts",
+  "main": "./dist/cjs/timeline-monad.js",
+  "module": "./dist/esm/timeline-monad.js",
+  "types": "./dist/esm/timeline-monad.d.ts",
   "scripts": {
-    "test": "jest --verbose=true"
+    "test": "jest --verbose=true",
+    "build": "rollup -c"
   },
+  "files": [
+    "./dist",
+    "LICENSE"
+  ],
   "repository": "https://github.com/stken2050/timeline-monad",
   "author": "Ken Okabe <stken2050@gmail.com>",
   "license": "MIT",
@@ -16,6 +21,7 @@
     "esm": "*",
     "jest": "*",
     "rollup": "*",
+    "rollup-plugin-commonjs": "*",
     "typescript": "*"
   }
 }

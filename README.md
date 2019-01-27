@@ -2,7 +2,6 @@
 
 
 <!---
-  コメント
 ## Documentation
 
   ### Online
