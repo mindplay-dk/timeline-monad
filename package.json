@@ -1,6 +1,6 @@
 {
   "name": "timeline-monad",
-  "version": "0.0.1",
+  "version": "0.9.0",
   "description": "Micro Functional Reactive Programming (FRP) Framework with Monad structure",
   "main": "./dist/cjs/timeline-monad.js",
   "module": "./dist/esm/timeline-monad.js",
@@ -16,6 +16,18 @@
   "repository": "https://github.com/stken2050/timeline-monad",
   "author": "Ken Okabe <stken2050@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "virtual",
+    "dom",
+    "ui",
+    "react",
+    "hooks",
+    "hyperapp",
+    "superfine",
+    "frp",
+    "functional",
+    "reactive"
+  ],
   "dependencies": {},
   "devDependencies": {
     "esm": "*",
