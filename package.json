@@ -11,12 +11,11 @@
   "repository": "https://github.com/stken2050/timeline-monad",
   "author": "Ken Okabe <stken2050@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "esm": "^3.0.84"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/jest": "^23.3.9",
-    "jest": "^23.6.0",
-    "typescript": "^3.1.6"
+    "esm": "*",
+    "jest": "*",
+    "rollup": "*",
+    "typescript": "*"
   }
 }
