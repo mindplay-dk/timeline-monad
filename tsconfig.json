@@ -4,13 +4,12 @@
     "module": "esnext",
     "moduleResolution": "node",
     "lib": [
-      "es2018",
-      "dom"
+      "es2018"
     ],
-    "outDir": "./build", /* Redirect output structure to the directory. */
-    "rootDir": "./src", /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    "outDir": "./build",
+    "rootDir": "./src",
     "strict": true,
-    // "declaration": true,
+    "declaration": true,
   },
   "exclude": [
     "node_modules"

@@ -48,7 +48,7 @@ const updateFlagsTL = (TLs: timeline[]) =>
     });
 
 const allThenResetTL =
-  (TLs: timeline[]) =>
+  (TLs: timeline[]): timeline =>
     T((selfAll: timeline) =>
       updateFlagsTL(TLs)(selfAll)
     );
