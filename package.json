@@ -1,6 +1,6 @@
 {
   "name": "timeline-monad",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Micro Functional Reactive Programming (FRP) Framework with Monad structure",
   "main": "./dist/cjs/timeline-monad.js",
   "module": "./dist/esm/timeline-monad.js",
@@ -10,7 +10,7 @@
     "build": "rollup -c"
   },
   "files": [
-    "./dist",
+    "./dist/",
     "LICENSE"
   ],
   "repository": "https://github.com/stken2050/timeline-monad",
