@@ -1,13 +1,4 @@
 # timeline-monad
 
-
-<!---
-## Documentation
-
-  ### Online
-https://kenokabe.github.io/timeline-monad/
-
-### Offline
-docs/index.html
--->
+[![Build Status](https://travis-ci.org/stken2050/timeline-monad.svg?branch=master)](https://travis-ci.org/stken2050/timeline-monad)
 
