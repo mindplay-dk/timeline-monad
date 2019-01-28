@@ -1,7 +1,7 @@
 
 const requireEsm = require('esm')(module);
 
-const { T } = requireEsm("../build/modules/timeline-monad.js");
+const { T } = requireEsm("../dist/esm/timeline-monad.js");
 
 //instant fill
 const timelineOf = (a) =>

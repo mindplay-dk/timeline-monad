@@ -1,8 +1,8 @@
 
 const requireEsm = require('esm')(module);
 
-const { T } = requireEsm("../build/modules/timeline-monad.js");
-const { allThenResetTL } = requireEsm("../build/modules/allThenResetTL");
+const { T } = requireEsm("../dist/esm/timeline-monad.js");
+const { allThenResetTL } = requireEsm("../dist/esm/allThenResetTL");
 const True = (done) => () => {
     done();
     return true;
