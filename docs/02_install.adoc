@@ -4,10 +4,9 @@ ifndef::imagesdir[:imagesdir: ./img/]
 ifndef::source-highlighter[:source-highlighter: highlightjs]
 ifndef::highlightjs-theme:[:highlightjs-theme: solarized-dark]
 
- 
 https://www.npmjs.com/package/timeline-monad
 
->npm i timeline-monad
+> npm i timeline-monad
 
 == ES Module (ESM)
 
