@@ -1,5 +1,5 @@
 = timeline-monad is Timeline Monad
-Ken Okabe <kenokabe@gmail.com>
+Ken Okabe <stken2050@gmail.com>
 :keywords:    JavaScript, ECMAScript, Promise, FRP, timeline, monad
 :description: timeline FRP Monad
 :homepage:    https://kenokabe.github.io/timeline-monad/
@@ -12,39 +12,25 @@ Ken Okabe <kenokabe@gmail.com>
 :imagesdir: ./img/ 
 :stem: latexmath
  
----
-ddfddf
-dfddf
-- GitHub Repository
+image::https://travis-ci.org/stken2050/timeline-monad.svg?branch=master[link="https://travis-ci.org/stken2050/timeline-monad"]
 
-https://github.com/kenokabe/timeline-monad
+++++
+<iframe src="https://ghbtns.com/github-btn.html?user=stken2050&repo=timeline-monad&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+++++ 
 
-- npm
 
-https://www.npmjs.com/package/timeline-monad
 
-- Quick Fiddle test
-
-https://jsfiddle.net/kenokabe/d3ocyhqr/
-
- 
 :leveloffset: 1
 
-include::./_01_what/index.adoc[]
+include::./01_what.adoc[]
 
-include::./_02_why/index.adoc[]
+include::./02_install.adoc[]
 
-include::./_03_where/index.adoc[]
+include::./03_background.adoc[]
 
-include::./_04_api/index.adoc[]
+include::./04_promise.adoc[]
 
-include::./_05_how/index.adoc[]
-
-include::./_06_monad/index.adoc[]
-
-include::./_07_install/index.adoc[]
-
-include::./_08_license/index.adoc[]
+include::./05_api.adoc[]
 
 
-ghhgggggghghghgfgh
+Star

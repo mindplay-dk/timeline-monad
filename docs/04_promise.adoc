@@ -1,0 +1,124 @@
+= __timeline__ is similar to Promise instance
+ifndef::stem[:stem: latexmath]
+ifndef::imagesdir[:imagesdir: ./img/]
+ifndef::source-highlighter[:source-highlighter: highlightjs]
+ifndef::highlightjs-theme:[:highlightjs-theme: solarized-dark]
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise[ES6+ Promise] is widely used in JavaScript.
+
+Promise and timeline-monad(FRP) has a common nature to handle asynchronous behaviors in functional programming, and both has similar syntax.
+
+In fact, **Promise is __functional__ and __reactive__. A Promise instance is a first class reactive value 'over time', so it's kind of Functional Reactive Programming(FRP)**, and the difference is in general, **FRP value reacts on repeating process, on the other hand, Promise reacts only one time**.
+
+Hence, although FRP or __timeline__ might be a new idea to a leaner, if one already know what the Promise is, it should be straight forward to understand what the __timeline__ is.
+
+[source,js]
+.Promise and timeline-monad
+----
+import { T } from "timeline-monad";
+
+let promise1resolve;
+const promise1 = new Promise(resolve => { <1>
+  promise1resolve = resolve;
+});
+const timeline1 = T(); <2>
+
+const promise2 = promise1.then(a => a + " promise"); <3>
+const timeline2 = timeline1.sync(a => a + " timeline"); <4>
+
+const promise3 = promise2.then(a => console.log(a)); <5>
+const timeline3 = timeline2.sync(a => console.log(a)); <6>
+
+promise1resolve("hello"); <7>
+timeline1.now = "hello"; <8>
+----
+
+<1> Define an empty Promise
+<2> Define an empty __timeline__
+<3> `promise1.then` method **returns another Promise: `promise2`** that will be resolved along with the specified function with the resolved value: `a` of `promise1`
+<4> `timeline1.sync` method **returns another __timeline__: `timeline2`** that is always synchronized along with the specified function with the updated current value: `a` of `timeline1`
+<5> When `promise2` is resolved, then show the value 
+<6> When `timeline2` is updated, always show the value 
+<7> Resolve the value of `promise1` as `"hello"`
+<8> Update the current value of `timeline1` as `"hello"`
+
+[source,shell]
+.Console
+----
+hello promise
+hello timeline
+----
+
+
+`Promise.then` and `timeline.sync` is like `Array.map` in the manner of delayed or asynchronously. The object method returns the object itself containing the mapped value.
+ 
+
+=== Self Contained __timeline__
+
+[source,js]
+.Promise and timeline-monad
+----
+import { T } from "timeline-monad";
+
+const promise = new Promise(resolve => { <1>
+
+  const f = () => resolve("Hello promise!"); <2>
+  setTimeout(f, 1000); <3>
+
+});
+const timeline = T(self => { <4>
+
+  const f = () => (self.now = "Hello timeline!"); <5>
+  setTimeout(f, 1000); <6>
+
+});
+
+const promise1 = promise.then(a => console.log(a)); <7>
+const timeline1 = timeline.sync(a => console.log(a)); <8>
+----
+
+<1> Define `promise` and provide the resolving function: `resolve` 
+<2> `resolve` the value of `promise` as `"Hello promise!"`
+<3> and that will happen 1 second later
+<4> Define `timeline` and provide the __timeline__ itself: `self` to update itself 
+<5> Update the current value of `self` = `timeline` as `"Hello timeline!"`
+<6> and that will happen 1 second later
+<7> When `promise` is resolved, then show the value 
+<8> When `timeline` is updated, always show the value 
+
+[source,shell]
+.Console
+----
+Hello promise!
+Hello timeline!
+----
+
+=== Continuous updates
+
+[source,js]
+.Promise and timeline-monad
+----
+import { T } from "timeline-monad";
+
+const timeline2 = T(self => {
+
+  const f = () => (self.now = "Hello timeline!");
+  setInterval(f, 1000); <1>
+
+});
+
+const timeline3 = timeline2.sync(a => console.log(a));
+----
+
+<1> In this code, the only difference is to use `setInterval` instead of `setTimeout`
+
+[source,shell]
+.Console
+----
+Hello timeline!
+Hello timeline!
+Hello timeline!
+.....
+.....
+----
+

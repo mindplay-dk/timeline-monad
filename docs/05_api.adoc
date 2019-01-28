@@ -1,0 +1,109 @@
+= API
+ifndef::stem[:stem: latexmath]
+ifndef::imagesdir[:imagesdir: ./img/]
+ifndef::source-highlighter[:source-highlighter: highlightjs]
+ifndef::highlightjs-theme:[:highlightjs-theme: solarized-dark]
+
+https://github.com/stken2050/timeline-monad/blob/master/build/modules/timeline-monad.d.ts[timeline-monad TypeScript type definition]
+
+== TypeScript type definition
+
+[source,js]
+.timeline type definition
+----
+interface timeline {
+    type: string;
+    now: any;
+    sync: Function;
+}
+declare const T: (timeFunction?: Function) => timeline;
+export { T };
+----
+
+
+== T( timeFunction )
+
+[source,js]
+----
+const T: (timeFunction?: Function) => timeline
+----
+
+`T` is a function to return `timeline` object.
+
+`timeFunction` is a function to define the `timeline` behavior with the argument `self` (`timeline` itself).
+
+== now
+
+[source,js]
+----
+const timeFunction = (self) ⇒ { /*…​*/ self.now = value;};
+----
+
+== .sync( someFunction )
+
+[source,js]
+----
+const timeline1 = timeline
+                         .sync( someFunction );
+----
+
+`timeFunction` is executed immediately by the `T` implementation, and when `self.now = value` is defined, the `sync` method returns a value that `someFunction` is applied to. 
+
+[TIP]
+.**timeline-monad** is extremely simple and easy to learn.
+====
+`T`, `now` and `sync` are all of the reserved words and units provided by the module. Once some `timeline` is created, `sync` is the only method a programmer cares.
+====
+
+
+[[Syntax]]
+== Syntax
+
+[source,js]
+----
+const timeFunction = (self) ⇒ { /*…​*/ self.now = value;};
+
+const timeline = T( timeFunction );
+
+const timeline1 = timeline.sync( someFunction );
+----
+
+== Simple usage
+
+`T()` is a `timeline` instance:
+
+.timeline instance
+```js
+const a = T();
+```
+
+As `timeline` is an infinite stream of time, `timeline` has a (a user's perspective) current value: `timeline.now`, and can be easily get/set as below:
+
+[source,shell]
+.write and read
+----
+a.now = 1;
+console.log(a.now);
+----
+
+[source,shell]
+.console
+----
+1
+----
+
+
+
+
+
+1
+sync  trigger
+
+
+sync  trigger
+1
+
+does not matter
+
+
+undefined never triggers

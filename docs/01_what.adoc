@@ -1,0 +1,15 @@
+= What is timeline-monad?
+ifndef::stem[:stem: latexmath]
+ifndef::imagesdir[:imagesdir: ./img/]
+ifndef::source-highlighter[:source-highlighter: highlightjs]
+ifndef::highlightjs-theme:[:highlightjs-theme: solarized-dark]
+
+1. *timeline-monad* is a JavaScript(ES6+) module of a minimal (super simple) implementation for __Functional Reactive Programming(FPP)__. The module provides *first class reactive values _'over time'_* .
+
+2. *timeline-monad* is robust for _function composition_
+because it has a https://ncatlab.org/nlab/show/monad[_monad_] structure.
+
+3. *timeline-monad*'s https://github.com/stken2050/timeline-monad/blob/master/dist/esm/timeline-monad.js[source code] is **less than 40 lines**(ESModule version, the comment lines excluded).
+
+4. The code is https://github.com/stken2050/timeline-monad/tree/master/test-jest[heavily tested] including to https://github.com/stken2050/timeline-monad/blob/master/test-jest/monad.test.js[satisfy monad laws]. 
+
