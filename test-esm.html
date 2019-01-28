@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <script defer type="module">
+        import { T } from "./dist/esm/timeline-monad.js";
+
+        const timeline = T();
+        timeline.now = 1;
+        alert(timeline.now);
+
+        //works on Firefox for local files
+    </script>
+</body>
+
+</html>

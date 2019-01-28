@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <script src="https://unpkg.com/timeline-monad/dist/umd/timeline-monad.js"></script>
+
+    <script>
+
+        const T = window["timeline-monad"].T
+        const timeline = T();
+        timeline.now = 1;
+        alert(timeline.now);
+
+        //works on Firefox for local files
+    </script>
+</body>
+
+</html>
