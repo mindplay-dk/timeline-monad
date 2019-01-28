@@ -20,7 +20,7 @@ https://github.com/stken2050/timeline-monad/blob/master/dist/esm/timeline-monad.
         const timeline = T();
 ```
 ++++
-<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="ZwOaEr" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="ZwOaEr">
+<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="js,console" data-user="stken2050" data-slug-hash="ZwOaEr" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="ZwOaEr">
   <span>See the Pen <a href="https://codepen.io/stken2050/pen/ZwOaEr/">
   ZwOaEr</a> by Ken OKABE (<a href="https://codepen.io/stken2050">@stken2050</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -57,7 +57,7 @@ https://github.com/stken2050/timeline-monad/blob/master/dist/esm/allThenResetTL.
         const timeline = T();
 ```
 ++++
-<p class="codepen" data-height="479" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="KJMZWE" style="height: 479px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello All Timeline">
+<p class="codepen" data-height="479" data-theme-id="0" data-default-tab="js,console" data-user="stken2050" data-slug-hash="KJMZWE" style="height: 479px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello All Timeline">
   <span>See the Pen <a href="https://codepen.io/stken2050/pen/KJMZWE/">
   Hello All Timeline</a> by Ken OKABE (<a href="https://codepen.io/stken2050">@stken2050</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
