@@ -7,10 +7,10 @@
 
 <body>
     <script defer type="module">
-        import { T } from "./dist/esm/timeline-monad.js";
 
+        import { T } from "./dist/esm/timeline-monad.js"
         const timeline = T();
-        timeline.now = 1;
+        timeline.now = "Hello";
         alert(timeline.now);
 
         //works on Firefox for local files
