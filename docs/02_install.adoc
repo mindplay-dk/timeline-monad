@@ -1,4 +1,4 @@
-= Install1111
+= Install
 ifndef::stem[:stem: latexmath]
 ifndef::imagesdir[:imagesdir: ./img/]
 ifndef::source-highlighter[:source-highlighter: highlightjs]
@@ -6,7 +6,7 @@ ifndef::highlightjs-theme:[:highlightjs-theme: solarized-dark]
 
 https://www.npmjs.com/package/timeline-monad
 
-> npm i timeline-monad
+ npm i timeline-monad
 
 == ES Module (ESM)
 
@@ -19,10 +19,12 @@ https://github.com/stken2050/timeline-monad/blob/master/dist/esm/timeline-monad.
         const timeline = T();
 ```
 ++++
-<iframe height="265" style="width: 100%;" scrolling="no" title="Hello Timeline" src="//codepen.io/stken2050/embed/ZwOaEr/?height=265&theme-id=0&default-tab=js,console" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/stken2050/pen/ZwOaEr/'>Hello Timeline</a> by Ken OKABE
-  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<p class="codepen" data-height="305" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="ZwOaEr" style="height: 305px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello Timeline">
+  <span>See the Pen <a href="https://codepen.io/stken2050/pen/ZwOaEr/">
+  Hello Timeline</a> by Ken OKABE (<a href="https://codepen.io/stken2050">@stken2050</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 ++++
 
 === Browser (CDN)
