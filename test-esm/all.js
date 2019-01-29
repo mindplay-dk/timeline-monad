@@ -12,7 +12,7 @@ const timelineAB =
   allThenResetTL([timelineA, timelineB]).sync(log);
 
 {// set the current values-----
-  timelineA.now = "Hello";
+  timelineA.now = 1;
 }
 
 
