@@ -41,8 +41,7 @@ https://github.com/stken2050/timeline-monad/blob/master/dist/esm/timeline-monad.
 == timeline-monad Extension
 
 === **allThenResetTL()** 
-
-corresponds to [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
+corresponds to https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all[Promise.all()]
 
 === ES Module (ESM)
 
