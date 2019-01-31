@@ -496,6 +496,21 @@ because it has a <a href="https://ncatlab.org/nlab/show/monad"><em>monad</em></a
 <pre>npm i timeline-monad</pre>
 </div>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Quick Starter project available</div>
+<div class="paragraph">
+<p><a href="https://github.com/stken2050/unlimitedzero-quick-start">unlimitedzero (timeline-monad + superfine) Quick Start template project</a></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="sect2">
 <h3 id="_es_module_esm">2.1. ES Module (ESM)</h3>
 <div class="paragraph">
@@ -506,8 +521,23 @@ because it has a <a href="https://ncatlab.org/nlab/show/monad"><em>monad</em></a
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">        import { T } from "./dist/esm/timeline-monad.js";
-        const timeline = T();</code></pre>
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">import { T } from "timeline-monad";</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">import { T } from "timeline-monad/dist/esm/timeline-monad.js";</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">import { T } from "../node_modules/timeline-monad/dist/esm/timeline-monad.js";</code></pre>
 </div>
 </div>
 <p class="codepen" data-height="305" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="ZwOaEr" style="height: 305px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello Timeline">
@@ -548,9 +578,15 @@ because it has a <a href="https://ncatlab.org/nlab/show/monad"><em>monad</em></a
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">        import { T } from "./dist/esm/timeline-monad.js";
-        import { allThenResetTL } from "./dist/esm/allThenResetTL.js";
-        const timeline = T();</code></pre>
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">import { T } from "timeline-monad/dist/esm/allThenResetTL.js";</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">import { T } from "../node_modules/timeline-monad/dist/esm/allThenResetTL.js";</code></pre>
 </div>
 </div>
 <p class="codepen" data-height="434" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="KJMZWE" style="height: 434px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello All Timeline">
@@ -969,7 +1005,7 @@ sync  trigger</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-01-29 09:38:12 JST
+Last updated 2019-01-31 09:45:38 JST
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css">
