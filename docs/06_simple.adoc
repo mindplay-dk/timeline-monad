@@ -4,18 +4,19 @@ ifndef::imagesdir[:imagesdir: ./img/]
 ifndef::source-highlighter[:source-highlighter: highlightjs]
 ifndef::highlightjs-theme:[:highlightjs-theme: solarized-dark]
 
-== Write and Read of the "current" value of __timeline__
+== Write and Read the "current" value of __timeline__
 
 `T()` is a __timeline__ instance:
 
+[source,js]
 .timeline instance
-```js
+----
 const timeline = T();
-```
+----
 
 As __timeline__ is an infinite stream of time, __timeline__ has a (in a user's perspective) "current" value: __timeline__ `.now`, and can be easily get/set as below:
 
-[source,shell]
+[source,js]
 .write and read
 ----
 timeline.now = "Hello";
@@ -29,12 +30,10 @@ Hello
 ----
 
 ++++
-<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="ZwOaEr" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello Timeline">
-  <span>See the Pen <a href="https://codepen.io/stken2050/pen/ZwOaEr/">
-  Hello Timeline</a> by Ken OKABE (<a href="https://codepen.io/stken2050">@stken2050</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<iframe height="265" style="width: 100%;" scrolling="no" title="Hello Timeline" src="//codepen.io/stken2050/embed/ZwOaEr/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/stken2050/pen/ZwOaEr/'>Hello Timeline</a> by Ken OKABE
+  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 ++++
 
 == __timeline__.now = undefined
@@ -78,31 +77,38 @@ timeline.now = undefined;
 On the other hand, the following code does something.
 
 ++++
-<p class="codepen" data-height="453" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="BMpKEb" style="height: 453px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello Timeline undefined01">
-  <span>See the Pen <a href="https://codepen.io/stken2050/pen/BMpKEb/">
-  Hello Timeline undefined01</a> by Ken OKABE (<a href="https://codepen.io/stken2050">@stken2050</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<iframe height="413" style="width: 100%;" scrolling="no" title="Hello Timeline undefined01" src="//codepen.io/stken2050/embed/BMpKEb/?height=413&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/stken2050/pen/BMpKEb/'>Hello Timeline undefined01</a> by Ken OKABE
+  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 ++++
 
 
 ++++
-<p class="codepen" data-height="437" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="PVWNrV" style="height: 437px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello Timeline undefined02">
-  <span>See the Pen <a href="https://codepen.io/stken2050/pen/PVWNrV/">
-  Hello Timeline undefined02</a> by Ken OKABE (<a href="https://codepen.io/stken2050">@stken2050</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<iframe height="419" style="width: 100%;" scrolling="no" title="Hello Timeline undefined02" src="//codepen.io/stken2050/embed/PVWNrV/?height=419&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/stken2050/pen/PVWNrV/'>Hello Timeline undefined02</a> by Ken OKABE
+  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 ++++
 
 
 ++++
-<p class="codepen" data-height="440" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="WPRxjQ" style="height: 440px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello Timeline undefined03">
-  <span>See the Pen <a href="https://codepen.io/stken2050/pen/WPRxjQ/">
-  Hello Timeline undefined03</a> by Ken OKABE (<a href="https://codepen.io/stken2050">@stken2050</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<iframe height="409" style="width: 100%;" scrolling="no" title="Hello Timeline undefined03" src="//codepen.io/stken2050/embed/WPRxjQ/?height=409&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/stken2050/pen/WPRxjQ/'>Hello Timeline undefined03</a> by Ken OKABE
+  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 ++++
 
+
+
+`timelineA` value is defined as `1` at first, then later changed to `5`.
+
+*`timelineB` is declared to be _always_ synchronized with `timelineA`, and an equation below is guaranteed to be satisfied.* 
+
+
+[stem]
+++++
+timelineB = timelineA \times 2
+++++
+
+`timelineB` depends (relies) on `timelineA`, and after the declaration, you don't need to, or should not touch the value of `timelineB`. Of course, you can add relation and connection to other Timelines.

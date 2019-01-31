@@ -38,12 +38,10 @@ import { T } from "../node_modules/timeline-monad/dist/esm/timeline-monad.js";
 ```
 
 ++++
-<p class="codepen" data-height="305" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="ZwOaEr" style="height: 305px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello Timeline">
-  <span>See the Pen <a href="https://codepen.io/stken2050/pen/ZwOaEr/">
-  Hello Timeline</a> by Ken OKABE (<a href="https://codepen.io/stken2050">@stken2050</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<iframe height="265" style="width: 100%;" scrolling="no" title="Hello Timeline" src="//codepen.io/stken2050/embed/ZwOaEr/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/stken2050/pen/ZwOaEr/'>Hello Timeline</a> by Ken OKABE
+  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 ++++
 
 === Browser (CDN)
@@ -79,12 +77,10 @@ import { T } from "../node_modules/timeline-monad/dist/esm/allThenResetTL.js";
 ```
 
 ++++
-<p class="codepen" data-height="434" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="KJMZWE" style="height: 434px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello All Timeline">
-  <span>See the Pen <a href="https://codepen.io/stken2050/pen/KJMZWE/">
-  Hello All Timeline</a> by Ken OKABE (<a href="https://codepen.io/stken2050">@stken2050</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<iframe height="497" style="width: 100%;" scrolling="no" title="Hello All Timeline" src="//codepen.io/stken2050/embed/KJMZWE/?height=497&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/stken2050/pen/KJMZWE/'>Hello All Timeline</a> by Ken OKABE
+  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 ++++
 
 === Browser (CDN)

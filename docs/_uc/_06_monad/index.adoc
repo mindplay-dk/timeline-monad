@@ -14,6 +14,13 @@ this isdd
 \Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
 ++++
 
+++++
+<iframe height="361" style="width: 100%;" scrolling="no" title="Hello Timeline timer" src="//codepen.io/stken2050/embed/daNXja/?height=361&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/stken2050/pen/daNXja/'>Hello Timeline timer</a> by Ken OKABE
+  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+++++
+
 
 力=質量stem:[\times]加速度
 
