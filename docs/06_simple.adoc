@@ -1,11 +1,10 @@
-= API
+= Simple usage
 ifndef::stem[:stem: latexmath]
 ifndef::imagesdir[:imagesdir: ./img/]
 ifndef::source-highlighter[:source-highlighter: highlightjs]
 ifndef::highlightjs-theme:[:highlightjs-theme: solarized-dark]
 
-
-== Simple usage
+== Write and Read of the "current" value of __timeline__
 
 `T()` is a __timeline__ instance:
 
@@ -14,7 +13,7 @@ ifndef::highlightjs-theme:[:highlightjs-theme: solarized-dark]
 const timeline = T();
 ```
 
-As __timeline__ is an infinite stream of time, __timeline__ has a (a user's perspective) current value: __timeline__ `.now`, and can be easily get/set as below:
+As __timeline__ is an infinite stream of time, __timeline__ has a (in a user's perspective) "current" value: __timeline__ `.now`, and can be easily get/set as below:
 
 [source,shell]
 .write and read
