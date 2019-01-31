@@ -12,7 +12,7 @@ https://www.npmjs.com/package/timeline-monad
 [TIP]
 .Quick Starter project available
 ====
-https://github.com/stken2050/unlimitedzero-quick-start[unlimitedzero (timeline-monad + superfine) Quick Start template project] 
+https://github.com/stken2050/unlimitedjs[unlimitedjs (timeline-monad + superfine) Quick Start template project] 
 ====
 
 == ES Module (ESM)
