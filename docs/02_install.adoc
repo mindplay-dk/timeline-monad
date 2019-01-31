@@ -8,16 +8,35 @@ https://www.npmjs.com/package/timeline-monad
 
  npm i timeline-monad
 
+
+[TIP]
+.Quick Starter project available
+====
+https://github.com/stken2050/unlimitedzero-quick-start[unlimitedzero (timeline-monad + superfine) Quick Start template project] 
+====
+
 == ES Module (ESM)
 
 Just use:
 
 https://github.com/stken2050/timeline-monad/blob/master/dist/esm/timeline-monad.js
 
-```js 
-        import { T } from "./dist/esm/timeline-monad.js";
-        const timeline = T();
+```js        
+import { T } from "timeline-monad";
 ```
+
+or
+
+```js        
+import { T } from "timeline-monad/dist/esm/timeline-monad.js";
+```
+
+or
+
+```js        
+import { T } from "../node_modules/timeline-monad/dist/esm/timeline-monad.js";
+```
+
 ++++
 <p class="codepen" data-height="305" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="ZwOaEr" style="height: 305px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello Timeline">
   <span>See the Pen <a href="https://codepen.io/stken2050/pen/ZwOaEr/">
@@ -49,11 +68,16 @@ Just use:
 
 https://github.com/stken2050/timeline-monad/blob/master/dist/esm/allThenResetTL.js
 
-```js 
-        import { T } from "./dist/esm/timeline-monad.js";
-        import { allThenResetTL } from "./dist/esm/allThenResetTL.js";
-        const timeline = T();
+```js        
+import { T } from "timeline-monad/dist/esm/allThenResetTL.js";
 ```
+
+or
+
+```js        
+import { T } from "../node_modules/timeline-monad/dist/esm/allThenResetTL.js";
+```
+
 ++++
 <p class="codepen" data-height="434" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="KJMZWE" style="height: 434px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello All Timeline">
   <span>See the Pen <a href="https://codepen.io/stken2050/pen/KJMZWE/">
