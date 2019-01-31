@@ -1,0 +1,110 @@
+= API
+ifndef::stem[:stem: latexmath]
+ifndef::imagesdir[:imagesdir: ./img/]
+ifndef::source-highlighter[:source-highlighter: highlightjs]
+ifndef::highlightjs-theme:[:highlightjs-theme: solarized-dark]
+
+
+== Simple usage
+
+`T()` is a __timeline__ instance:
+
+.timeline instance
+```js
+const timeline = T();
+```
+
+As __timeline__ is an infinite stream of time, __timeline__ has a (a user's perspective) current value: __timeline__ `.now`, and can be easily get/set as below:
+
+[source,shell]
+.write and read
+----
+timeline.now = "Hello";
+console.log(timeline.now);
+----
+
+[source,shell]
+.console
+----
+Hello
+----
+
+++++
+<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="ZwOaEr" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello Timeline">
+  <span>See the Pen <a href="https://codepen.io/stken2050/pen/ZwOaEr/">
+  Hello Timeline</a> by Ken OKABE (<a href="https://codepen.io/stken2050">@stken2050</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+++++
+
+== __timeline__.now = undefined
+
+When a __timeline__ is defined, in most of cases, the current __timeline__ value is undefined.
+
+.timeline instance
+```js
+const timeline = T();
+```
+
+As long as the value of  __timeline__.now is `undefined`, __someFunction__ of __timeline__.sync(__someFunction__) is never evaluated.
+
+The following code does nothing since the value of  __timeline__.now is `undefined`.
+
+
+.timeline sync
+```js
+const timeline = T();
+  
+timeline.sync(
+    a => console.log(a)
+  );
+```
+
+The following code also does nothing.
+
+.timeline sync
+```js
+const timeline = T();
+  
+timeline.sync(
+    a => console.log(a)
+  );
+
+timeline.now = undefined;
+```
+
+
+== __timeline__.sync is declarative
+
+On the other hand, the following code does something.
+
+++++
+<p class="codepen" data-height="453" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="BMpKEb" style="height: 453px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello Timeline undefined01">
+  <span>See the Pen <a href="https://codepen.io/stken2050/pen/BMpKEb/">
+  Hello Timeline undefined01</a> by Ken OKABE (<a href="https://codepen.io/stken2050">@stken2050</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+++++
+
+
+++++
+<p class="codepen" data-height="437" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="PVWNrV" style="height: 437px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello Timeline undefined02">
+  <span>See the Pen <a href="https://codepen.io/stken2050/pen/PVWNrV/">
+  Hello Timeline undefined02</a> by Ken OKABE (<a href="https://codepen.io/stken2050">@stken2050</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+++++
+
+
+++++
+<p class="codepen" data-height="440" data-theme-id="0" data-default-tab="js,result" data-user="stken2050" data-slug-hash="WPRxjQ" style="height: 440px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Hello Timeline undefined03">
+  <span>See the Pen <a href="https://codepen.io/stken2050/pen/WPRxjQ/">
+  Hello Timeline undefined03</a> by Ken OKABE (<a href="https://codepen.io/stken2050">@stken2050</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+++++
+

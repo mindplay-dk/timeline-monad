@@ -32,5 +32,6 @@ include::./04_promise.adoc[]
 
 include::./05_api.adoc[]
 
+include::./06_simple.adoc[]
 
 Star
