@@ -39,7 +39,7 @@ Hello
 
 == __timeline__.now = undefined
 
-When a __timeline__ is defined, in most of cases, the current __timeline__ value is undefined.
+Unless a __timeline__ is defined along with an immidiate "current" value, the current __timeline__ value is undefined.
 
 .timeline instance
 ```js
@@ -72,7 +72,6 @@ timeline.sync(
 
 timeline.now = undefined;
 ```
-
 
 == __timeline__.sync is declarative
 
