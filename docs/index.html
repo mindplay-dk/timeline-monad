@@ -541,10 +541,6 @@ because it has a <a href="https://ncatlab.org/nlab/show/monad"><em>monad</em></a
 <pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">import { T } from "../node_modules/timeline-monad/dist/esm/timeline-monad.js";</code></pre>
 </div>
 </div>
-<iframe height="265" style="width: 100%;" scrolling="no" title="Hello Timeline" src="//codepen.io/stken2050/embed/ZwOaEr/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/stken2050/pen/ZwOaEr/'>Hello Timeline</a> by Ken OKABE
-  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
 </div>
 <div class="sect3">
 <h4 id="_es_module_esm_from_browser">2.2. ES Module (ESM) from Browser</h4>
@@ -586,6 +582,10 @@ because it has a <a href="https://ncatlab.org/nlab/show/monad"><em>monad</em></a
     &lt;/script&gt;</code></pre>
 </div>
 </div>
+<iframe height="265" style="width: 100%;" scrolling="no" title="Hello Timeline" src="//codepen.io/stken2050/embed/ZwOaEr/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/stken2050/pen/ZwOaEr/'>Hello Timeline</a> by Ken OKABE
+  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 </div>
 <div class="sect2">
 <h3 id="_timeline_monad_extension">2.3. timeline-monad Extension</h3>
@@ -603,7 +603,9 @@ corresponds to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">import { T } from "timeline-monad/dist/esm/allThenResetTL.js";</code></pre>
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">    &lt;script type="module"&gt;
+        import { T } from "https://unpkg.com/timeline-monad/dist/esm/timeline-monad.js";
+    &lt;/script&gt;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -614,10 +616,6 @@ corresponds to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/
 <pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">import { T } from "../node_modules/timeline-monad/dist/esm/allThenResetTL.js";</code></pre>
 </div>
 </div>
-<iframe height="497" style="width: 100%;" scrolling="no" title="Hello All Timeline" src="//codepen.io/stken2050/embed/KJMZWE/?height=497&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/stken2050/pen/KJMZWE/'>Hello All Timeline</a> by Ken OKABE
-  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
 </div>
 <div class="sect3">
 <h4 id="_es_module_esm_from_browser_2">2.3.2. ES Module (ESM) from Browser</h4>
@@ -654,6 +652,10 @@ corresponds to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/
     &lt;/script&gt;</code></pre>
 </div>
 </div>
+<iframe height="497" style="width: 100%;" scrolling="no" title="Hello All Timeline" src="//codepen.io/stken2050/embed/KJMZWE/?height=497&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/stken2050/pen/KJMZWE/'>Hello All Timeline</a> by Ken OKABE
+  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 </div>
 </div>
 <div class="sect2">
@@ -1127,7 +1129,7 @@ timeline.now = undefined;</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-02-01 14:49:34 JST
+Last updated 2019-02-01 15:00:08 JST
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css">
