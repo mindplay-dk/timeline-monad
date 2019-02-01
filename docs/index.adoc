@@ -34,6 +34,7 @@ include::./05_api.adoc[]
 
 include::./06_simple.adoc[]
 
+:leveloffset: 0
 
 == MIT License
 
