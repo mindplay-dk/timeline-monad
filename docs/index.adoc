@@ -34,4 +34,10 @@ include::./05_api.adoc[]
 
 include::./06_simple.adoc[]
 
-Star
+
+== MIT License
+
+++++
+<iframe src="https://ghbtns.com/github-btn.html?user=stken2050&repo=timeline-monad&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+++++ 
+
