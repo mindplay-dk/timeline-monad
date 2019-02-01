@@ -21,29 +21,24 @@ Just use:
 
 https://github.com/stken2050/timeline-monad/blob/master/dist/esm/timeline-monad.js
 
-```js        
+[source,js]
+----
 import { T } from "timeline-monad";
-```
+----
 
 or
 
-```js        
+[source,js]
+----
 import { T } from "timeline-monad/dist/esm/timeline-monad.js";
-```
+----
 
 or
 
-```js        
+[source,js]
+----
 import { T } from "../node_modules/timeline-monad/dist/esm/timeline-monad.js";
-```
-
-++++
-<iframe height="265" style="width: 100%;" scrolling="no" title="Hello Timeline" src="//codepen.io/stken2050/embed/ZwOaEr/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/stken2050/pen/ZwOaEr/'>Hello Timeline</a> by Ken OKABE
-  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-++++
-
+----
 
 === ES Module (ESM) from Browser
 https://caniuse.com/#feat=es6-module[Browser support for ES modules via script tag]
@@ -77,6 +72,13 @@ remote CDN
     </script>
 ----
 
+++++
+<iframe height="265" style="width: 100%;" scrolling="no" title="Hello Timeline" src="//codepen.io/stken2050/embed/ZwOaEr/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/stken2050/pen/ZwOaEr/'>Hello Timeline</a> by Ken OKABE
+  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+++++
+
 
 == timeline-monad Extension
 
@@ -89,22 +91,19 @@ Just use:
 
 https://github.com/stken2050/timeline-monad/blob/master/dist/esm/allThenResetTL.js
 
-```js        
-import { T } from "timeline-monad/dist/esm/allThenResetTL.js";
-```
+[source,js]
+----
+    <script type="module">
+        import { T } from "https://unpkg.com/timeline-monad/dist/esm/timeline-monad.js";
+    </script>
+----
 
 or
 
-```js        
+[source,js]
+----
 import { T } from "../node_modules/timeline-monad/dist/esm/allThenResetTL.js";
-```
-
-++++
-<iframe height="497" style="width: 100%;" scrolling="no" title="Hello All Timeline" src="//codepen.io/stken2050/embed/KJMZWE/?height=497&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/stken2050/pen/KJMZWE/'>Hello All Timeline</a> by Ken OKABE
-  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-++++
+----
 
 === ES Module (ESM) from Browser
 
@@ -137,6 +136,13 @@ remote CDN
         import { allThenResetTL } from "https://unpkg.com/timeline-monad/dist/esm/allThenResetTL.js";
     </script>
 ----
+
+++++
+<iframe height="497" style="width: 100%;" scrolling="no" title="Hello All Timeline" src="//codepen.io/stken2050/embed/KJMZWE/?height=497&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/stken2050/pen/KJMZWE/'>Hello All Timeline</a> by Ken OKABE
+  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+++++
 
 == TypeScript Type definition files
 
