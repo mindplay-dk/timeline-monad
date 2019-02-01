@@ -512,8 +512,8 @@ because it has a <a href="https://ncatlab.org/nlab/show/monad"><em>monad</em></a
 </tr>
 </table>
 </div>
-<div class="sect2">
-<h3 id="_es_module_esm">2.1. ES Module (ESM)</h3>
+<div class="sect3">
+<h4 id="_es_module_esm_from_node">2.1. ES Module (ESM) from Node</h4>
 <div class="paragraph">
 <p>Just use:</p>
 </div>
@@ -545,30 +545,56 @@ because it has a <a href="https://ncatlab.org/nlab/show/monad"><em>monad</em></a
   See the Pen <a href='https://codepen.io/stken2050/pen/ZwOaEr/'>Hello Timeline</a> by Ken OKABE
   (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
+</div>
 <div class="sect3">
-<h4 id="_browser_cdn">2.1.1. Browser (CDN)</h4>
+<h4 id="_es_module_esm_from_browser">2.2. ES Module (ESM) from Browser</h4>
+<div class="paragraph">
+<p><a href="https://caniuse.com/#feat=es6-module">Browser support for ES modules via script tag</a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./img/02/scriptmodule.png" alt="scriptmodule">
+</div>
+</div>
+<div class="paragraph">
+<p>local ESM in any location</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">    &lt;script src="https://unpkg.com/timeline-monad/dist/umd/timeline-monad.js"&gt;&lt;/script&gt;
-
-    &lt;script&gt;
-        const T = window["timeline-monad"].T;
-        const timeline = T();
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">    &lt;script type="module"&gt;
+        import { T } from "./dist/esm/timeline-monad.js";
+    &lt;/script&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>locally installed node module</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">    &lt;script type="module"&gt;
+        import { T } from "../node_modules/timeline-monad/dist/esm/timeline-monad.js";
+    &lt;/script&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>remote CDN</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">    &lt;script type="module"&gt;
+        import { T } from "https://unpkg.com/timeline-monad/dist/esm/timeline-monad.js";
     &lt;/script&gt;</code></pre>
 </div>
 </div>
 </div>
-</div>
 <div class="sect2">
-<h3 id="_timeline_monad_extension">2.2. timeline-monad Extension</h3>
-<div class="sect3">
-<h4 id="_allthenresettl">2.2.1. <strong>allThenResetTL()</strong></h4>
+<h3 id="_timeline_monad_extension">2.3. timeline-monad Extension</h3>
 <div class="paragraph">
-<p>corresponds to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a></p>
-</div>
+<p><strong>allThenResetTL()</strong>
+corresponds to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a></p>
 </div>
 <div class="sect3">
-<h4 id="_es_module_esm_2">2.2.2. ES Module (ESM)</h4>
+<h4 id="_es_module_esm_from_node_2">2.3.1. ES Module (ESM) from Node</h4>
 <div class="paragraph">
 <p>Just use:</p>
 </div>
@@ -594,22 +620,44 @@ because it has a <a href="https://ncatlab.org/nlab/show/monad"><em>monad</em></a
 </iframe>
 </div>
 <div class="sect3">
-<h4 id="_browser_cdn_2">2.2.3. Browser (CDN)</h4>
+<h4 id="_es_module_esm_from_browser_2">2.3.2. ES Module (ESM) from Browser</h4>
+<div class="paragraph">
+<p>local ESM in any location</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">    &lt;script src="https://unpkg.com/timeline-monad/dist/umd/allThenResetTL.js"&gt;&lt;/script&gt;
-
-    &lt;script&gt;
-        const T = window["timeline-monad"].T;
-        const allThenResetTL = window["timeline-monad"].allThenResetTL;
-        const timeline = T();
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">    &lt;script type="module"&gt;
+    import { T } from "./dist/esm/timeline-monad.js";
+    import { allThenResetTL } from "./dist/esm/allThenResetTL.js";
+    &lt;/script&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>locally installed node module</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">    &lt;script type="module"&gt;
+    import { T } from "../node_modules/timeline-monad/dis/esm/timeline-monad.js";
+    import { allThenResetTL } from "../node_modules/timeline-monad/dis/esm/allThenResetTL.js";
+    &lt;/script&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>remote CDN</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">    &lt;script type="module"&gt;
+        import { T } from "https://unpkg.com/timeline-monad/dist/esm/timeline-monad.js";
+        import { allThenResetTL } from "https://unpkg.com/timeline-monad/dist/esm/allThenResetTL.js";
     &lt;/script&gt;</code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_typescript_type_definition_files">2.3. TypeScript Type definition files</h3>
+<h3 id="_typescript_type_definition_files">2.4. TypeScript Type definition files</h3>
 <div class="paragraph">
 <p><a href="https://github.com/stken2050/timeline-monad/blob/master/dist/esm/timeline-monad.d.ts" class="bare">https://github.com/stken2050/timeline-monad/blob/master/dist/esm/timeline-monad.d.ts</a></p>
 </div>
@@ -1079,7 +1127,7 @@ timeline.now = undefined;</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-01-31 21:06:52 JST
+Last updated 2019-02-01 14:49:34 JST
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css">
