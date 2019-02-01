@@ -1,13 +1,12 @@
 {
   "name": "timeline-monad",
-  "version": "0.9.9",
+  "version": "0.9.10",
   "description": "Micro Functional Reactive Programming (FRP) Framework with Monad structure",
   "main": "./dist/cjs/timeline-monad.js",
   "module": "./dist/esm/timeline-monad.js",
   "types": "./dist/esm/timeline-monad.d.ts",
   "scripts": {
-    "test": "jest --verbose=true",
-    "build": "rollup -c"
+    "test": "jest --verbose=true"
   },
   "files": [
     "dist/",
@@ -34,8 +33,6 @@
   "devDependencies": {
     "esm": "*",
     "jest": "*",
-    "rollup": "*",
-    "rollup-plugin-commonjs": "*",
     "typescript": "*"
   }
 }

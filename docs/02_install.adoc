@@ -15,7 +15,7 @@ https://www.npmjs.com/package/timeline-monad
 https://github.com/stken2050/unlimitedjs[unlimitedjs (timeline-monad + superfine) Quick Start template project] 
 ====
 
-== ES Module (ESM)
+=== ES Module (ESM) from Node
 
 Just use:
 
@@ -44,23 +44,46 @@ import { T } from "../node_modules/timeline-monad/dist/esm/timeline-monad.js";
 </iframe>
 ++++
 
-=== Browser (CDN)
 
-```html
-    <script src="https://unpkg.com/timeline-monad/dist/umd/timeline-monad.js"></script>
+=== ES Module (ESM) from Browser
+https://caniuse.com/#feat=es6-module[Browser support for ES modules via script tag]
 
-    <script>
-        const T = window["timeline-monad"].T;
-        const timeline = T();
+image::./02/scriptmodule.png[]
+
+local ESM in any location
+
+[source,js]
+----
+    <script type="module">
+        import { T } from "./dist/esm/timeline-monad.js";
     </script>
-```
+----
+
+locally installed node module
+
+[source,js]
+----
+    <script type="module">
+        import { T } from "../node_modules/timeline-monad/dist/esm/timeline-monad.js";
+    </script>
+----
+
+remote CDN
+
+[source,js]
+----
+    <script type="module">
+        import { T } from "https://unpkg.com/timeline-monad/dist/esm/timeline-monad.js";
+    </script>
+----
+
 
 == timeline-monad Extension
 
-=== **allThenResetTL()** 
+**allThenResetTL()** 
 corresponds to https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all[Promise.all()]
 
-=== ES Module (ESM)
+=== ES Module (ESM) from Node
 
 Just use:
 
@@ -83,17 +106,37 @@ import { T } from "../node_modules/timeline-monad/dist/esm/allThenResetTL.js";
 </iframe>
 ++++
 
-=== Browser (CDN)
+=== ES Module (ESM) from Browser
 
-```html
-    <script src="https://unpkg.com/timeline-monad/dist/umd/allThenResetTL.js"></script>
+local ESM in any location
 
-    <script>
-        const T = window["timeline-monad"].T;
-        const allThenResetTL = window["timeline-monad"].allThenResetTL;
-        const timeline = T();
+[source,js]
+----
+    <script type="module">
+    import { T } from "./dist/esm/timeline-monad.js";
+    import { allThenResetTL } from "./dist/esm/allThenResetTL.js";
     </script>
-```
+----
+
+locally installed node module
+
+[source,js]
+----
+    <script type="module">
+    import { T } from "../node_modules/timeline-monad/dis/esm/timeline-monad.js";
+    import { allThenResetTL } from "../node_modules/timeline-monad/dis/esm/allThenResetTL.js";
+    </script>
+----
+
+remote CDN
+
+[source,js]
+----
+    <script type="module">
+        import { T } from "https://unpkg.com/timeline-monad/dist/esm/timeline-monad.js";
+        import { allThenResetTL } from "https://unpkg.com/timeline-monad/dist/esm/allThenResetTL.js";
+    </script>
+----
 
 == TypeScript Type definition files
 
