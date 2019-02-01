@@ -8,12 +8,13 @@ https://www.npmjs.com/package/timeline-monad
 
  npm i timeline-monad
 
-
 [TIP]
 .Quick Starter project available
 ====
 https://github.com/stken2050/unlimitedjs[unlimitedjs (timeline-monad + superfine) Quick Start template project] 
 ====
+
+== timeline-monad
 
 === ES Module (ESM) from Node
 
