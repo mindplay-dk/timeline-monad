@@ -674,6 +674,44 @@ corresponds to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/
 <div class="sect1">
 <h2 id="_frp_background_and_rationale">3. FRP Background and Rationale</h2>
 <div class="sectionbody">
+<div class="quoteblock">
+<blockquote>
+The distinction between the past, present and future is only a stubbornly persistent illusion.
+</blockquote>
+<div class="attribution">
+&#8212; Albert Einstein
+</div>
+</div>
+<hr>
+<div class="sect2">
+<h3 id="_the_illusion_of_time_past_present_and_future_all_exist_together">3.1. The illusion of time : past, present and future all exist together</h3>
+<div class="paragraph">
+<p>Frozen Block Universe and Human Consciousness</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://github.com/kenokabe/00img/wiki/block-universe.jpg" alt="block universe">
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming">Conal Elliott(a developer who has contributed to early FRP) explaines</a></p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>FRP is about "datatypes that represent a value <strong>over time</strong>".
+Conventional imperative programming captures these dynamic values only indirectly, through state and mutations. The complete history (past, present, future) has no first class representation. Moreover, only <em>discretely evolving</em> values can be (indirectly) captured, since the imperative paradigm is temporally discrete.
+In contrast, FRP captures these evolving values <em>directly</em> and has no difficulty with <em>continuously</em> evolving values.
+Dynamic/evolving values (i.e., values "over time") are first class values in themselves. You can define them and combine them, pass them into &amp; out of functions.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_immutable_world_perspective_fits_immutability_in_functional_programming">3.2. Immutable world perspective fits immutability in functional programming</h3>
+<div class="paragraph">
+<p>As long as we are entrapped in perspective of mutable world model, functional programming remains very problematic since the concept of immutability is critical.</p>
+</div>
 <div class="paragraph">
 <p><a href="https://wiki.haskell.org/FRP">Functional Reactive Programming (FRP)</a> integrates <strong>time flow</strong> and compositional events into functional programming.</p>
 </div>
@@ -711,29 +749,10 @@ corresponds to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/CMB_Timeline300_no_WMAP.jpg" alt="CMB Timeline300 no WMAP">
 </div>
 </div>
+</div>
 <div class="sect2">
-<h3 id="_the_illusion_of_time_past_present_and_future_all_exist_together">3.1. The illusion of time : past, present and future all exist together</h3>
-<div class="paragraph">
-<p>Frozen Block Universe and Human Consciousness</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="https://github.com/kenokabe/00img/wiki/block-universe.jpg" alt="block universe">
-</div>
-</div>
-<div class="paragraph">
-<p><a href="https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming">Conal Elliott(a developer who has contributed to early FRP) explaines</a></p>
-</div>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
-<p>FRP is about "datatypes that represent a value <strong>over time</strong>".
-Conventional imperative programming captures these dynamic values only indirectly, through state and mutations. The complete history (past, present, future) has no first class representation. Moreover, only <em>discretely evolving</em> values can be (indirectly) captured, since the imperative paradigm is temporally discrete.
-In contrast, FRP captures these evolving values <em>directly</em> and has no difficulty with <em>continuously</em> evolving values.
-Dynamic/evolving values (i.e., values "over time") are first class values in themselves. You can define them and combine them, pass them into &amp; out of functions.</p>
-</div>
-</blockquote>
-</div>
+<h3 id="_frp_is_about_immutability_declarative_and_event_driven_programming">3.3. FRP is about immutability, declarative and event-driven programming</h3>
+
 </div>
 </div>
 </div>
@@ -1134,7 +1153,7 @@ timeline.now = undefined;</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-02-08 13:21:59 JST
+Last updated 2019-02-08 15:03:43 JST
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css">

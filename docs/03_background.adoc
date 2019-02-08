@@ -4,6 +4,30 @@ ifndef::imagesdir[:imagesdir: ./img/]
 ifndef::source-highlighter[:source-highlighter: highlightjs]
 ifndef::highlightjs-theme:[:highlightjs-theme: solarized-dark]
 
+[quote, Albert Einstein]
+The distinction between the past, present and future is only a stubbornly persistent illusion.
+
+---
+
+== The illusion of time : past, present and future all exist together
+
+Frozen Block Universe and Human Consciousness
+
+image::https://github.com/kenokabe/00img/wiki/block-universe.jpg[]
+
+https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming[Conal Elliott(a developer who has contributed to early FRP) explaines]
+
+
+
+> FRP is about "datatypes that represent a value **over time**".
+> Conventional imperative programming captures these dynamic values only indirectly, through state and mutations. The complete history (past, present, future) has no first class representation. Moreover, only _discretely evolving_ values can be (indirectly) captured, since the imperative paradigm is temporally discrete.
+> In contrast, FRP captures these evolving values _directly_ and has no difficulty with _continuously_ evolving values.
+> Dynamic/evolving values (i.e., values "over time") are first class values in themselves. You can define them and combine them, pass them into & out of functions.
+
+== Immutable world perspective fits immutability in functional programming
+
+As long as we are entrapped in perspective of mutable world model, functional programming remains very problematic since the concept of immutability is critical. 
+
 https://wiki.haskell.org/FRP[Functional Reactive Programming (FRP)] integrates **time flow** and compositional events into functional programming.
 
 The basic idea is that **a time-varying value can be represented as a function of time**.
@@ -30,17 +54,7 @@ Our world is modeled as an immutable, timeless, stateless unity from the perspec
 
 image::https://upload.wikimedia.org/wikipedia/commons/6/6f/CMB_Timeline300_no_WMAP.jpg[]
 
-== The illusion of time : past, present and future all exist together
 
-Frozen Block Universe and Human Consciousness
-
-image::https://github.com/kenokabe/00img/wiki/block-universe.jpg[]
-
-https://stackoverflow.com/questions/1028250/what-is-functional-reactive-programming[Conal Elliott(a developer who has contributed to early FRP) explaines]
-
-> FRP is about "datatypes that represent a value **over time**".
-> Conventional imperative programming captures these dynamic values only indirectly, through state and mutations. The complete history (past, present, future) has no first class representation. Moreover, only _discretely evolving_ values can be (indirectly) captured, since the imperative paradigm is temporally discrete.
-> In contrast, FRP captures these evolving values _directly_ and has no difficulty with _continuously_ evolving values.
-> Dynamic/evolving values (i.e., values "over time") are first class values in themselves. You can define them and combine them, pass them into & out of functions.
+== FRP is about immutability, declarative and event-driven programming
 
 
