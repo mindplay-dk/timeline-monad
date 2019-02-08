@@ -30,7 +30,7 @@ Hello
 ----
 
 ++++
-<iframe height="265" style="width: 100%;" scrolling="no" title="Hello Timeline" src="//codepen.io/stken2050/embed/ZwOaEr/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="265" style="width: 100%;" scrolling="no" title="Hello Timeline" src="//codepen.io/stken2050/embed/ZwOaEr/?height=265&theme-id=36003&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/stken2050/pen/ZwOaEr/'>Hello Timeline</a> by Ken OKABE
   (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -77,7 +77,7 @@ timeline.now = undefined;
 On the other hand, the following code does something.
 
 ++++
-<iframe height="413" style="width: 100%;" scrolling="no" title="Hello Timeline undefined01" src="//codepen.io/stken2050/embed/BMpKEb/?height=413&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="413" style="width: 100%;" scrolling="no" title="Hello Timeline undefined01" src="//codepen.io/stken2050/embed/BMpKEb/?height=413&theme-id=36003&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/stken2050/pen/BMpKEb/'>Hello Timeline undefined01</a> by Ken OKABE
   (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -85,7 +85,7 @@ On the other hand, the following code does something.
 
 
 ++++
-<iframe height="419" style="width: 100%;" scrolling="no" title="Hello Timeline undefined02" src="//codepen.io/stken2050/embed/PVWNrV/?height=419&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="419" style="width: 100%;" scrolling="no" title="Hello Timeline undefined02" src="//codepen.io/stken2050/embed/PVWNrV/?height=419&theme-id=36003&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/stken2050/pen/PVWNrV/'>Hello Timeline undefined02</a> by Ken OKABE
   (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -93,7 +93,7 @@ On the other hand, the following code does something.
 
 
 ++++
-<iframe height="409" style="width: 100%;" scrolling="no" title="Hello Timeline undefined03" src="//codepen.io/stken2050/embed/WPRxjQ/?height=409&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="409" style="width: 100%;" scrolling="no" title="Hello Timeline undefined03" src="//codepen.io/stken2050/embed/WPRxjQ/?height=409&theme-id=36003&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/stken2050/pen/WPRxjQ/'>Hello Timeline undefined03</a> by Ken OKABE
   (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
