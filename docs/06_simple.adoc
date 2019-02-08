@@ -108,9 +108,7 @@ On the other hand, the following code does something.
 timelineB = timelineA \times 2
 ++++
  
-*`timelineB` is declared to be _always_ synchronized with `timelineA`, and the equation is guaranteed to be satisfied.* 
-
-
+`timelineB` is declared to be _always_ synchronized with `timelineA`, and the equation is guaranteed to be satisfied.
 
 `timelineB` depends (relies) on `timelineA`, and when `timelineA` is updated, `timelineB` is also automatically updated.
 
