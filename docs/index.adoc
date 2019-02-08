@@ -12,6 +12,13 @@ Ken Okabe <stken2050@gmail.com>
 :imagesdir: ./img/ 
 :stem: latexmath
  
+++++
+<style type="text/css">
+p >code {background-color: #aaaaaa};　
+td >code {background-color: #aaaaaa};
+</style>
+++++
+
 Micro Functional Reactive Programming (FRP) Framework with Monad structure
 
 image::https://travis-ci.org/stken2050/timeline-monad.svg?branch=master[link="https://travis-ci.org/stken2050/timeline-monad"]
