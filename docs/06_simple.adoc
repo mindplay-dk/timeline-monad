@@ -99,8 +99,6 @@ On the other hand, the following code does something.
 </iframe>
 ++++
 
-
----
 == Equation
 
 [stem]
