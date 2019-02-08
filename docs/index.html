@@ -457,6 +457,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
+<div class="paragraph">
+<p>Micro Functional Reactive Programming (FRP) Framework with Monad structure</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="https://travis-ci.org/stken2050/timeline-monad"><img src="https://travis-ci.org/stken2050/timeline-monad.svg?branch=master" alt="timeline monad"></a>
@@ -1128,9 +1131,6 @@ timeline.now = undefined;</code></pre>
   (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 <div class="paragraph">
-<p><code>timelineA</code> value is defined as <code>1</code> at first, then later changed to <code>5</code>.</p>
-</div>
-<div class="paragraph">
 <p><strong><code>timelineB</code> is declared to be <em>always</em> synchronized with <code>timelineA</code>, and an equation below is guaranteed to be satisfied.</strong></p>
 </div>
 <div class="stemblock">
@@ -1139,8 +1139,157 @@ timeline.now = undefined;</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><code>timelineB</code> depends (relies) on <code>timelineA</code>, and after the declaration, you don&#8217;t need to, or should not touch the value of <code>timelineB</code>. Of course, you can add relation and connection to other Timelines.</p>
+<p><code>timelineB</code> depends (relies) on <code>timelineA</code>, and when <code>timelineA</code> is updated, <code>timelineB</code> is also automatically updated.</p>
 </div>
+<div class="paragraph">
+<p>To describe this relation, the code is below:</p>
+</div>
+<div class="listingblock">
+<div class="title">timeline virtualDOM</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">const timelineA = T();
+
+const timelineB = timelineA
+                    .sync(a =&gt; a * 2);
+
+const timeline = timelineB
+                   .sync(b =&gt; console.log_(b));
+
+timelineA.now = 1;</code></pre>
+</div>
+</div>
+<iframe height="335" style="width: 100%;" scrolling="no" title="Hello Timeline Sync" src="//codepen.io/stken2050/embed/mvpaER/?height=335&theme-id=36003&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/stken2050/pen/mvpaER/'>Hello Timeline Sync</a> by Ken OKABE
+  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+<div class="sect3">
+<h4 id="_timer_timeline">6.3.1. Timer timeline</h4>
+<iframe height="373" style="width: 100%;" scrolling="no" title="Hello Timeline timer" src="//codepen.io/stken2050/embed/daNXja/?height=373&theme-id=36003&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/stken2050/pen/daNXja/'>Hello Timeline timer</a> by Ken OKABE
+  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+</div>
+<div class="sect3">
+<h4 id="_canvas">6.3.2. Canvas</h4>
+<iframe height="550" style="width: 100%;" scrolling="no" title="unlimitedjs_canvas" src="//codepen.io/stken2050/embed/jdmeYK/?height=550&theme-id=36003&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/stken2050/pen/jdmeYK/'>unlimitedjs_canvas</a> by Ken OKABE
+  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+<div class="listingblock">
+<div class="title">timeline Canvas</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">import { T } from "../../node_modules/timeline-monad/dist/esm/timeline-monad.js";
+
+const canvas = document.getElementById('canvas1'); <i class="conum" data-value="1"></i><b>(1)</b>
+
+const pointerTL = T(self =&gt; {    <i class="conum" data-value="2"></i><b>(2)</b>
+  canvas.onmousemove = e =&gt;
+    self.now = { x: e.clientX, y: e.clientY };
+});
+
+const drawTL = T(self =&gt; {   <i class="conum" data-value="3"></i><b>(3)</b>
+  const ctx = canvas.getContext('2d');
+  const timeline = self.sync(pointer =&gt; {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.beginPath();
+    ctx.arc(pointer.x - 10, pointer.y - 10, 10, 0, Math.PI * 2, true);
+    ctx.fillStyle = "red";
+    ctx.fill();
+  });
+});
+
+const timeline = pointerTL.sync(pointer =&gt;    <i class="conum" data-value="4"></i><b>(4)</b>
+  drawTL.now = pointer
+);</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>canvas DOM node</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>INPUT: <em>timeline</em> of mouse pointer coordinate</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>OUTPUT: <em>timeline</em> of canvas drawing</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>INPUT(pointerTL) is synchronized with OUTPUT(drawTL)</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_virtual_dom_superfine">6.3.3. Virtual DOM (Superfine)</h4>
+<iframe height="654" style="width: 100%;" scrolling="no" title="unlimitedjs_vdom" src="//codepen.io/stken2050/embed/xMdyjx/?height=654&theme-id=36003&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/stken2050/pen/xMdyjx/'>unlimitedjs_vdom</a> by Ken OKABE
+  (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+<div class="listingblock">
+<div class="title">timeline virtualDOM</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">import { T } from "../../node_modules/timeline-monad/dist/esm/timeline-monad.js";
+import { h, patch } from "../../node_modules/superfine/src/index.js";
+
+const canvas = document.getElementById('vdom1'); <i class="conum" data-value="1"></i><b>(1)</b>
+
+const pointerTL = T(self =&gt; {    <i class="conum" data-value="2"></i><b>(2)</b>
+  canvas.onmousemove = e =&gt;
+    self.now = { x: e.clientX, y: e.clientY };
+});
+
+const drawTL = T(self =&gt; {    <i class="conum" data-value="3"></i><b>(3)</b>
+  const topNodeTL = self.sync(pointer =&gt;
+    &lt;div style={{
+      "left": (pointer.x - 20) + "px",
+      "top": (pointer.y - 20) + "px",
+      "width": "20px",
+      "height": "20px",
+      "border-radius": "50%",
+      "background-color": "red",
+      "position": "relative"
+    }}&gt;&lt;/div&gt;
+  );
+  const viewNodeTL = topNodeTL.sync(topNode =&gt;
+    patch(viewNodeTL.now, topNode, canvas)
+  );
+});
+
+const timeline = pointerTL.sync(pointer =&gt;   <i class="conum" data-value="4"></i><b>(4)</b>
+  drawTL.now = pointer
+);</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>real DOM node (named as <code>canvas</code>)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>INPUT: <em>timeline</em> of mouse pointer coordinate : <em>same code of <strong>timeline Canvas</strong></em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>OUTPUT: <em>timeline</em> of virtualDOM drawing(rendering)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>INPUT(pointerTL) is synchronized with OUTPUT(drawTL)  : <em>same code of <strong>timeline Canvas</strong></em></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_virtualdomweb_ui_read_more_on_unlimitedjs_docs_tutorial">6.4. For VirtualDOM(Web UI), read more on <a href="https://stken2050.github.io/unlimitedjs/">unlimitedjs Docs &amp; Tutorial</a></h3>
+
 </div>
 </div>
 </div>
@@ -1153,7 +1302,7 @@ timeline.now = undefined;</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-02-08 15:03:43 JST
+Last updated 2019-02-08 17:55:11 JST
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css">
