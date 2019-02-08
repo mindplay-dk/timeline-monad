@@ -114,7 +114,7 @@ To describe this relation, the code is below:
 
 
 [source,js]
-.timeline virtualDOM
+.timeline equation sync
 ----
 const timelineA = T(); <1>
 const timelineB = timelineA
