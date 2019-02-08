@@ -133,12 +133,12 @@ setTimeout(()=>
 
 <1> Declare empty `timelineA`
 <2> Declare `timelineB` that is synchronized with `timelineA` that satisfies the given function
-<3> On `timelineB` updates, `consol.log` the value
+<3> On `timelineB` updates, `console.log` the value
 <4> later, the value of `timelineA` becomes `1`
 <5> later, the value of `timelineA` becomes `5`
 
 ++++
-<iframe height="335" style="width: 100%;" scrolling="no" title="Hello Timeline Sync" src="//codepen.io/stken2050/embed/mvpaER/?height=335&theme-id=36003&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="447" style="width: 100%;" scrolling="no" title="Hello Timeline Sync" src="//codepen.io/stken2050/embed/mvpaER/?height=447&theme-id=36003&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/stken2050/pen/mvpaER/'>Hello Timeline Sync</a> by Ken OKABE
   (<a href='https://codepen.io/stken2050'>@stken2050</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
