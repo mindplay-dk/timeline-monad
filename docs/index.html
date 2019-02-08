@@ -1155,16 +1155,42 @@ timeline.now = undefined;</code></pre>
 <div class="listingblock">
 <div class="title">timeline virtualDOM</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">const timelineA = T();
-
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">const timelineA = T(); <i class="conum" data-value="1"></i><b>(1)</b>
 const timelineB = timelineA
-                    .sync(a =&gt; a * 2);
-
+            .sync(a =&gt; a * 2); <i class="conum" data-value="2"></i><b>(2)</b>
 const timeline = timelineB
-                   .sync(b =&gt; console.log_(b));
+          .sync(b =&gt; console.log(b)); <i class="conum" data-value="3"></i><b>(3)</b>
 
-timelineA.now = 1;</code></pre>
+setTimeout(()=&gt;
+      (timelineA.now = 1), 100);  <i class="conum" data-value="4"></i><b>(4)</b>
+
+setTimeout(()=&gt;
+      (timelineA.now = 5), 200);  <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
 </div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Declare empty <code>timelineA</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Declare <code>timelineB</code> that is synchronized with <code>timelineA</code> that satisfies the given function</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>On <code>timelineB</code> updates, <code>consol.log</code> the value</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>later, the value of <code>timelineA</code> becomes <code>1</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>later, the value of <code>timelineA</code> becomes <code>5</code></td>
+</tr>
+</table>
 </div>
 <iframe height="335" style="width: 100%;" scrolling="no" title="Hello Timeline Sync" src="//codepen.io/stken2050/embed/mvpaER/?height=335&theme-id=36003&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/stken2050/pen/mvpaER/'>Hello Timeline Sync</a> by Ken OKABE
@@ -1310,7 +1336,7 @@ const timeline = pointerTL.sync(pointer =&gt;   <i class="conum" data-value="4">
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-02-08 18:04:26 JST
+Last updated 2019-02-08 18:20:01 JST
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css">
