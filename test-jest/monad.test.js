@@ -93,14 +93,14 @@ const f = (a) => (a * 2);
 const g = (a) => (a + 1);
 
 {
-  const a = 5;
+  const a = 1;
   const fTL = compose(f)(timelineOf);
   const gTL = compose(g)(timelineOf);
 
   monadTest(a)(fTL)(gTL);
 }
 {
-  const a = timelineOf(50);
+  const a = timelineOf(5);
 
   const fTL = compose
     ((a) => (a.sync(f)))
