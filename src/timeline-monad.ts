@@ -22,13 +22,13 @@ const Events = () => {
   }
 };
 
-const T = ((Events) =>
+const T = (() =>
   (timeFunction: Function = () => { }): timeline => {
     //immutable in the frozen universe
     let currentVal: any = undefined;
     const timeline = (() => {
       const ev = Events();
-      
+
       return {
         type: "timeline-monad",  //for TTX => TX
         get now() { //getter returns a value of now
@@ -59,6 +59,6 @@ const T = ((Events) =>
     })();
     timeFunction(timeline);
     return timeline;
-  })(Events);
+  })();
 
 export { T };
