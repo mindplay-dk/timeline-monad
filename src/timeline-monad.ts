@@ -7,15 +7,20 @@ interface timeline {
 //time-index of the current time
 // on the timeline from now until the future / next - now
 
-const right = (a: any) => (b: any) => b;
+const Events = () => {
+  const observers: Function[] = [];
 
-const Events = () => ((observers: Function[]) => ({
-  register: (f: Function) =>
-    (observers[observers.length] = f),
-  trigger: (val: any) => right
-    (observers.map((f: Function) => f(val)))
-    (val)
-}))([]);
+  return {
+    register(observer: Function) {
+      observers.push(observer);
+    },
+    trigger(value: any) {
+      for (const observer of observers) {
+        observer(value);
+      }
+    }
+  }
+};
 
 const T = ((Events) =>
   (timeFunction: Function = () => { }): timeline => {
