@@ -40,7 +40,7 @@ const T = (() =>
             ? undefined
             : ev.trigger(currentVal);
         },
-        sync: ((ev) => (f: Function) => {
+        sync: (() => (f: Function) => {
           const syncTL: timeline = T();
           const todo = (val: unknown) => {
             const newVal: undefined | timeline = f(val);
@@ -54,7 +54,7 @@ const T = (() =>
           ev.register(todo);
           timeline.now = timeline.now;
           return syncTL;
-        })(ev)
+        })()
       };
     })();
     timeFunction(timeline);
