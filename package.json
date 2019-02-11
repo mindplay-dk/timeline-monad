@@ -5,7 +5,7 @@
   "module": "./dist/esm/timeline-monad.js",
   "types": "./dist/esm/timeline-monad.d.ts",
   "scripts": {
-    "test": "jest --verbose=true"
+    "test": "tsc && jest --verbose=true"
   },
   "files": [
     "dist/",

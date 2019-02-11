@@ -22,43 +22,42 @@ const Events = () => {
   }
 };
 
-const T = (() =>
-  (timeFunction: Function = () => { }): timeline => {
-    //immutable in the frozen universe
-    let currentVal: any = undefined;
-    const timeline = (() => {
-      const ev = Events();
+const T = (timeFunction: Function = () => { }): timeline => {
+  //immutable in the frozen universe
+  let currentVal: any = undefined;
+  const timeline: timeline = (() => {
+    const ev = Events();
 
-      return {
-        type: "timeline-monad",  //for TTX => TX
-        get now() { //getter returns a value of now
-          return currentVal;
-        },
-        set now(val) {
-          currentVal = val;
-          (currentVal === undefined)
-            ? undefined
-            : ev.trigger(currentVal);
-        },
-        sync(f: Function) {
-          const syncTL: timeline = T();
-          const todo = (val: unknown) => {
-            const newVal: undefined | timeline = f(val);
-            // RightIdentity: join = TTX => TX  
-            return (newVal !== undefined) &&
-              (newVal.type === timeline.type)
-              ? newVal.sync((val: unknown) =>
-                syncTL.now = val)
-              : syncTL.now = newVal;
-          };
-          ev.register(todo);
-          timeline.now = timeline.now;
-          return syncTL;
-        }
-      };
-    })();
-    timeFunction(timeline);
-    return timeline;
+    return {
+      type: "timeline-monad",  //for TTX => TX
+      get now() { //getter returns a value of now
+        return currentVal;
+      },
+      set now(val) {
+        currentVal = val;
+        (currentVal === undefined)
+          ? undefined
+          : ev.trigger(currentVal);
+      },
+      sync(f: Function) {
+        const syncTL: timeline = T();
+        const todo = (val: unknown) => {
+          const newVal: undefined | timeline = f(val);
+          // RightIdentity: join = TTX => TX  
+          return (newVal !== undefined) &&
+            (newVal.type === timeline.type)
+            ? newVal.sync((val: unknown) =>
+              syncTL.now = val)
+            : syncTL.now = newVal;
+        };
+        ev.register(todo);
+        timeline.now = timeline.now;
+        return syncTL;
+      }
+    };
   })();
+  timeFunction(timeline);
+  return timeline;
+};
 
 export { T };
